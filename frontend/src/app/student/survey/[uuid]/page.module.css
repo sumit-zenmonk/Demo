@@ -1,0 +1,45 @@
+.container {
+    height: 100%;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 600px;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.title {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.description {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.question {
+    margin-bottom: 18px;
+}
+
+.label {
+    font-weight: 500;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.button {
+    margin-top: 10px;
+    height: 45px;
+}
+
+.loading {
+    text-align: center;
+    padding: 50px;
+}

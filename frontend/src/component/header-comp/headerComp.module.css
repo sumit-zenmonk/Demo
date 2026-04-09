@@ -1,0 +1,118 @@
+.header {
+    width: 100%;
+    height: 5.5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 3%;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    overflow: hidden;
+}
+
+.leftContainer {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.leftContainer :global(input) {
+    /* border-radius: 4px; */
+    padding: 5px 12px;
+    /* width: 250px; */
+}
+
+.rightContainer {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 3%;
+}
+
+.sideBox {
+    display: flex;
+    height: fit-content;
+    border-left: 1px solid rgb(219, 219, 219);
+}
+
+.category {
+    width: fit-content;
+    display: flex;
+}
+
+.categoryBoxes {
+    color: rgb(94, 94, 94);
+    min-width: 70px;
+    text-transform: none;
+}
+
+.categoryBoxes svg {
+    font-size: 20px;
+}
+
+.Mui-selected {
+    color: black;
+}
+
+.categoryBoxes:hover {
+    color: black;
+}
+
+.categoryText {
+    font-size: 0.65rem;
+}
+
+.authButtons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.signinButton {
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid #0a66c2;
+    border-radius: 20px;
+    /* padding: 5px 14px; */
+    color: #0a66c2;
+}
+
+.signinButton:hover {
+    background-color: #eaf4ff;
+}
+
+.joinusButton {
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: #0a66c2;
+    border-radius: 20px;
+    color: white;
+    /* padding: 5px 14px; */
+}
+
+.joinusButton:hover {
+    background-color: #004182;
+}
+
+.logoutButton {
+    color: #d11124;
+    font-weight: 600;
+}
+
+.category :global(.MuiTabs-root) {
+    height: 100%;
+}
+
+.category :global(.MuiTab-root) {
+    min-height: 5.5%;
+    padding: 4px 12px;
+}
