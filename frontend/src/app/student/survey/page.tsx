@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { Button, Typography, Box } from "@mui/material";
+import { useEffect, useMemo, useState } from "react";
+import { Button, Typography, Box, Select, MenuItem, SelectChangeEvent } from "@mui/material";
 import styles from "./survey.module.css";
 import { RootState } from "@/redux/store";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks.ts";
@@ -13,11 +13,34 @@ export default function SurveyPage() {
     const dispatch = useAppDispatch();
     const router = useRouter();
     const { surveys, loading, responses } = useAppSelector((state: RootState) => state.studentReducer);
+    const [filterStatus, setFilterStatus] = useState('all');
 
     useEffect(() => {
         dispatch(getStudentSurveys({}));
         dispatch(getStudentResponses({}));
     }, [dispatch]);
+
+    const filtered_surveys = useMemo(() => {
+        if (!surveys) return [];
+
+        return surveys.filter((survey) => {
+            const isSubmitted = responses?.some(
+                (r: any) => r.survey_uuid === survey.uuid
+            );
+
+            if (filterStatus === 'pending') {
+                return !isSubmitted;
+            } else if (filterStatus === 'completed') {
+                return isSubmitted;
+            }
+
+            return true;
+        });
+    }, [surveys, responses, filterStatus]);
+
+    const handleFilterExpiry = (event: SelectChangeEvent) => {
+        setFilterStatus(event.target.value as string);
+    };
 
     return (
         <Box className={styles.container}>
@@ -27,8 +50,18 @@ export default function SurveyPage() {
                 <Box className={styles.header}>
                     <Typography variant="h5">Surveys</Typography>
 
+                    <Select
+                        value={filterStatus}
+                        label="Filter"
+                        onChange={handleFilterExpiry}
+                    >
+                        <MenuItem value={'all'}>All</MenuItem>
+                        <MenuItem value={'pending'}>Pending</MenuItem>
+                        <MenuItem value={'completed'}>Completed</MenuItem>
+                    </Select>
+
                 </Box>
-                {surveys.map((survey: any) => {
+                {filtered_surveys && filtered_surveys.map((survey: any) => {
                     const isSubmitted = responses?.some(
                         (r: any) => r.survey_uuid === survey.uuid
                     );

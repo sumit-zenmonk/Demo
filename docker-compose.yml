@@ -21,6 +21,9 @@ services:
       - database
     command: sh -c "npm run build && npm run migration:run && npm run start:dev"
     env_file: ./backend/.env # npm run seed can be done anytime but not everytime while running services
+    volumes:
+      - ./backend:/app
+      - /app/node_modules     
 
   frontend:
     build:
@@ -32,6 +35,9 @@ services:
     depends_on:
       - backend
     env_file: ./frontend/.env
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules  
 
 volumes:
   postgres_data: {}
