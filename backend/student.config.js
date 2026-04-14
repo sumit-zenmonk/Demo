@@ -1,37 +1,37 @@
 [
     {
-        name: 'Layne Keebler DDS',
-        email: 'Hilma3@yahoo.com',
-        card_uuid: '0a8169c8-158f-4fc2-ab93-c64bc0f8cd29',
+        name: 'Jill Krajcik-Vandervort',
+        email: 'Andrew.Larson@gmail.com',
+        card_uuid: '917435b1-8d46-4333-aabb-1944f435244c',
         program: 'Bca',
         role: 'student'
     },
     {
-        name: 'Lynne Cummings',
-        email: 'Kristofer_Blanda56@gmail.com',
-        card_uuid: '9593b7ac-a04f-48fe-9dc0-13620843107d',
+        name: 'Cierra Parisian',
+        email: 'Shea29@hotmail.com',
+        card_uuid: 'e45d586c-4aea-464f-b5d3-8b3b9c01ccc4',
         program: 'Bca',
         role: 'student'
     },
     {
-        name: 'Janet Emard',
-        email: 'Barbara.Swaniawski0@hotmail.com',
-        card_uuid: '30b41bdf-67d4-49ed-a917-68c7fb98f9d8',
+        name: 'Margie Weissnat',
+        email: 'Kraig_Brakus@hotmail.com',
+        card_uuid: '5e44b87e-bc5a-41f2-a603-b24a2fe3fd78',
         program: 'Mtech',
         role: 'student'
     },
     {
-        name: 'Adela Auer',
-        email: 'Andrew6@yahoo.com',
-        card_uuid: '2f452b61-465d-47d9-bbe0-0c3a6383dc5a',
-        program: 'Btech',
+        name: 'David Oberbrunner-Larson',
+        email: 'Stacy.Fadel52@hotmail.com',
+        card_uuid: '57a217a2-db04-4c45-bceb-925839e38cd4',
+        program: 'Bca',
         role: 'student'
     },
     {
-        name: 'Marina Ritchie',
-        email: 'Brandon_Turcotte4@hotmail.com',
-        card_uuid: 'cd1cd5fb-ff94-4cb1-8ad3-152365df9ad6',
-        program: 'Btech',
+        name: 'Grover Goldner',
+        email: 'Phil_Marquardt16@hotmail.com',
+        card_uuid: 'f895578d-01a4-44cc-9b09-77290b036b74',
+        program: 'Bca',
         role: 'student'
     }
 ]
